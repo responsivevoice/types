@@ -1,7 +1,7 @@
 {
   "name": "@responsivevoice/types",
   "version": "2.0.0",
-  "description": "Shared TypeScript type definitions for ResponsiveVoice packages",
+  "description": "Shared TypeScript type definitions for the ResponsiveVoice text-to-speech (TTS) packages",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -36,10 +36,11 @@
   },
   "keywords": [
     "responsivevoice",
-    "tts",
     "text-to-speech",
+    "tts",
     "typescript",
-    "types"
+    "types",
+    "type-definitions"
   ],
   "author": "ResponsiveVoice, Inc. <support@responsivevoice.org>",
   "license": "MIT",
