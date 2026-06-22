@@ -40,7 +40,9 @@
     "tts",
     "typescript",
     "types",
-    "type-definitions"
+    "type-definitions",
+    "zod",
+    "schemas"
   ],
   "author": "ResponsiveVoice, Inc. <support@responsivevoice.org>",
   "license": "MIT",

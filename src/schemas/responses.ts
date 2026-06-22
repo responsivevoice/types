@@ -150,7 +150,7 @@ export const SynthesizeLinkSchema = z
   .object({
     href: z.string(),
     method: z.literal('POST'),
-    body: z.object({ name: z.string(), lang: z.string() }),
+    body: z.object({ voice: z.string(), lang: z.string().optional() }),
   })
   .meta({ ref: 'SynthesizeLink', description: 'HATEOAS synthesize action link' });
 /** Inferred from {@link SynthesizeLinkSchema}. */
@@ -162,8 +162,8 @@ export const SynthesizeStreamLinkSchema = z
     href: z.string(),
     method: z.literal('POST'),
     body: z.object({
-      name: z.string(),
-      lang: z.string(),
+      voice: z.string(),
+      lang: z.string().optional(),
       stream: z.boolean(),
     }),
     accept: z.literal('text/event-stream'),
@@ -183,8 +183,8 @@ export const StreamWebsocketLinkSchema = z
     protocol: z.literal('websocket'),
     message: z.object({
       type: z.string(),
-      name: z.string(),
-      lang: z.string(),
+      voice: z.string(),
+      lang: z.string().optional(),
     }),
     premium: z.boolean(),
   })

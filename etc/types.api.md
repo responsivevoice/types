@@ -559,8 +559,8 @@ export const StreamWebsocketLinkSchema: z.ZodObject<{
     protocol: z.ZodLiteral<"websocket">;
     message: z.ZodObject<{
         type: z.ZodString;
-        name: z.ZodString;
-        lang: z.ZodString;
+        voice: z.ZodString;
+        lang: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
     premium: z.ZodBoolean;
 }, z.core.$strip>;
@@ -573,8 +573,8 @@ export const SynthesizeLinkSchema: z.ZodObject<{
     href: z.ZodString;
     method: z.ZodLiteral<"POST">;
     body: z.ZodObject<{
-        name: z.ZodString;
-        lang: z.ZodString;
+        voice: z.ZodString;
+        lang: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
 }, z.core.$strip>;
 
@@ -629,8 +629,8 @@ export const SynthesizeStreamLinkSchema: z.ZodObject<{
     href: z.ZodString;
     method: z.ZodLiteral<"POST">;
     body: z.ZodObject<{
-        name: z.ZodString;
-        lang: z.ZodString;
+        voice: z.ZodString;
+        lang: z.ZodOptional<z.ZodString>;
         stream: z.ZodBoolean;
     }, z.core.$strip>;
     accept: z.ZodLiteral<"text/event-stream">;
@@ -779,16 +779,16 @@ export const VoiceDetailLinksSchema: z.ZodObject<{
         href: z.ZodString;
         method: z.ZodLiteral<"POST">;
         body: z.ZodObject<{
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>;
     }, z.core.$strip>;
     'synthesize:stream': z.ZodObject<{
         href: z.ZodString;
         method: z.ZodLiteral<"POST">;
         body: z.ZodObject<{
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
             stream: z.ZodBoolean;
         }, z.core.$strip>;
         accept: z.ZodLiteral<"text/event-stream">;
@@ -799,8 +799,8 @@ export const VoiceDetailLinksSchema: z.ZodObject<{
         protocol: z.ZodLiteral<"websocket">;
         message: z.ZodObject<{
             type: z.ZodString;
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>;
         premium: z.ZodBoolean;
     }, z.core.$strip>;
@@ -838,16 +838,16 @@ export const VoiceDetailResponseSchema: z.ZodObject<{
             href: z.ZodString;
             method: z.ZodLiteral<"POST">;
             body: z.ZodObject<{
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
             }, z.core.$strip>;
         }, z.core.$strip>;
         'synthesize:stream': z.ZodObject<{
             href: z.ZodString;
             method: z.ZodLiteral<"POST">;
             body: z.ZodObject<{
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
                 stream: z.ZodBoolean;
             }, z.core.$strip>;
             accept: z.ZodLiteral<"text/event-stream">;
@@ -858,8 +858,8 @@ export const VoiceDetailResponseSchema: z.ZodObject<{
             protocol: z.ZodLiteral<"websocket">;
             message: z.ZodObject<{
                 type: z.ZodString;
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
             }, z.core.$strip>;
             premium: z.ZodBoolean;
         }, z.core.$strip>;
@@ -902,16 +902,16 @@ export const VoiceLinksSchema: z.ZodObject<{
         href: z.ZodString;
         method: z.ZodLiteral<"POST">;
         body: z.ZodObject<{
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>;
     }, z.core.$strip>;
     'synthesize:stream': z.ZodObject<{
         href: z.ZodString;
         method: z.ZodLiteral<"POST">;
         body: z.ZodObject<{
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
             stream: z.ZodBoolean;
         }, z.core.$strip>;
         accept: z.ZodLiteral<"text/event-stream">;
@@ -922,8 +922,8 @@ export const VoiceLinksSchema: z.ZodObject<{
         protocol: z.ZodLiteral<"websocket">;
         message: z.ZodObject<{
             type: z.ZodString;
-            name: z.ZodString;
-            lang: z.ZodString;
+            voice: z.ZodString;
+            lang: z.ZodOptional<z.ZodString>;
         }, z.core.$strip>;
         premium: z.ZodBoolean;
     }, z.core.$strip>;
@@ -1042,16 +1042,16 @@ export const VoicesByLanguageResponseSchema: z.ZodObject<{
                 href: z.ZodString;
                 method: z.ZodLiteral<"POST">;
                 body: z.ZodObject<{
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                 }, z.core.$strip>;
             }, z.core.$strip>;
             'synthesize:stream': z.ZodObject<{
                 href: z.ZodString;
                 method: z.ZodLiteral<"POST">;
                 body: z.ZodObject<{
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                     stream: z.ZodBoolean;
                 }, z.core.$strip>;
                 accept: z.ZodLiteral<"text/event-stream">;
@@ -1062,8 +1062,8 @@ export const VoicesByLanguageResponseSchema: z.ZodObject<{
                 protocol: z.ZodLiteral<"websocket">;
                 message: z.ZodObject<{
                     type: z.ZodString;
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                 }, z.core.$strip>;
                 premium: z.ZodBoolean;
             }, z.core.$strip>;
@@ -1143,16 +1143,16 @@ export const VoicesListResponseSchema: z.ZodObject<{
                 href: z.ZodString;
                 method: z.ZodLiteral<"POST">;
                 body: z.ZodObject<{
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                 }, z.core.$strip>;
             }, z.core.$strip>;
             'synthesize:stream': z.ZodObject<{
                 href: z.ZodString;
                 method: z.ZodLiteral<"POST">;
                 body: z.ZodObject<{
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                     stream: z.ZodBoolean;
                 }, z.core.$strip>;
                 accept: z.ZodLiteral<"text/event-stream">;
@@ -1163,8 +1163,8 @@ export const VoicesListResponseSchema: z.ZodObject<{
                 protocol: z.ZodLiteral<"websocket">;
                 message: z.ZodObject<{
                     type: z.ZodString;
-                    name: z.ZodString;
-                    lang: z.ZodString;
+                    voice: z.ZodString;
+                    lang: z.ZodOptional<z.ZodString>;
                 }, z.core.$strip>;
                 premium: z.ZodBoolean;
             }, z.core.$strip>;
@@ -1224,16 +1224,16 @@ export const VoiceWithLinksSchema: z.ZodObject<{
             href: z.ZodString;
             method: z.ZodLiteral<"POST">;
             body: z.ZodObject<{
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
             }, z.core.$strip>;
         }, z.core.$strip>;
         'synthesize:stream': z.ZodObject<{
             href: z.ZodString;
             method: z.ZodLiteral<"POST">;
             body: z.ZodObject<{
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
                 stream: z.ZodBoolean;
             }, z.core.$strip>;
             accept: z.ZodLiteral<"text/event-stream">;
@@ -1244,8 +1244,8 @@ export const VoiceWithLinksSchema: z.ZodObject<{
             protocol: z.ZodLiteral<"websocket">;
             message: z.ZodObject<{
                 type: z.ZodString;
-                name: z.ZodString;
-                lang: z.ZodString;
+                voice: z.ZodString;
+                lang: z.ZodOptional<z.ZodString>;
             }, z.core.$strip>;
             premium: z.ZodBoolean;
         }, z.core.$strip>;
