@@ -1,5 +1,11 @@
 # @responsivevoice/types
 
+## 2.0.1
+
+### Patch Changes
+
+- Voice synthesize HATEOAS links advertise the `voice` parameter and make `lang` optional.
+
 ## 2.0.0
 
 First public release of the rebuilt ResponsiveVoice — a complete, TypeScript-first rewrite of the original library, now split into focused, independently-versioned packages.
